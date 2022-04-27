@@ -9,7 +9,9 @@ outputs:
   time:
     description: 'The time we greeted you'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
+  using: 'node16'
+  main: 'index.js'
+  # using: 'docker'
+  # image: 'Dockerfile'
+  # args:
+  #   - ${{ inputs.who-to-greet }}
