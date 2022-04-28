@@ -15,7 +15,7 @@ jobs:
       #   run: echo "The time was ${{ steps.hello.outputs.time }}"
       - uses: actions/checkout@v3
       - id: foo
-        uses: actions/github-action-playground
+        uses: actions/github-action-playground@v1
         with:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
