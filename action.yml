@@ -50,7 +50,7 @@ runs:
       shell: bash
     - id: random-number-generator
       run: echo "::set-output name=random-number::$(echo $RANDOM)"
-      shell: sh
+      shell: bash
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
       shell: bash          
     - run: goodbye.sh
