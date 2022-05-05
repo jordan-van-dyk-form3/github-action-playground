@@ -53,3 +53,5 @@ runs:
       shell: bash
     - run: goodbye.sh
       shell: bash
+    - run: ls
+      shell: bash
