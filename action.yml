@@ -53,5 +53,7 @@ runs:
       shell: bash
     - run: ls
       shell: bash
+    - run: chmod +x goodbye.sh
+      shell: bash
     - run: goodbye.sh
       shell: bash
