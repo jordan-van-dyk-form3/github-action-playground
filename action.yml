@@ -43,6 +43,8 @@ outputs:
   random-number:
     description: "Random number"
     value: ${{ steps.random-number-generator.outputs.random-id }}
+  time:
+    value: ${{ steps.goodbye.outputs.time }}
 runs:
   using: "composite"
   steps:
@@ -53,5 +55,6 @@ runs:
       shell: bash
     - run: ls
       shell: bash
-    - run: ./goodbye.sh
+    - id: goodbye
+      run: ./goodbye.sh
       shell: bash
