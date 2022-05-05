@@ -51,7 +51,7 @@ runs:
     - id: random-number-generator
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
-    - run: goodbye.sh
-      shell: bash
+    # - run: goodbye.sh
+    #   shell: bash
     - run: ls
       shell: bash
