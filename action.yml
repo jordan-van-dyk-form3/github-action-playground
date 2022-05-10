@@ -56,5 +56,5 @@ runs:
     - run: ls
       shell: bash
     - id: goodbye
-      run: ./goodbye.sh ${{ inputs.who-to-greet }}
+      run: ./goodbye.sh "${{ inputs.who-to-greet }}"
       shell: bash
