@@ -49,12 +49,13 @@ runs:
   using: "composite"
   steps:
     - run: echo Hello ${{ inputs.who-to-greet }} from playground.
-      shell: bash
+      # shell: bash
+      shell: sh
     - id: random-number-generator
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
-      shell: bash
+      shell: sh
     - run: ls
-      shell: bash
+      shell: sh
     - id: goodbye
       run: ./goodbye.sh "${{ inputs.who-to-greet }}"
-      shell: bash
+      shell: sh
