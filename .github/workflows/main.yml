@@ -1,8 +1,8 @@
 on: 
   workflow_call:
-    secrets:
-      superSecret:
-        required: true
+    # secrets:
+    #   superSecret:
+    #     required: true
 jobs:
   # hello_world_job:
   #   runs-on: ubuntu-latest
@@ -27,5 +27,8 @@ jobs:
   reuse_work_job:
     runs-on: ubuntu-latest
     steps:
-      - name: doStuff
-        run: echo ${{ secrets.superSecret }}
+      - id: foo
+        uses: jordan-van-dyk-form3/composite@main
+        with:
+          who: ${{ github.event.inputs.a_name }}
+          something-neat: ${{ github.event.inputs.something}}
