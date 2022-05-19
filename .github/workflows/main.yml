@@ -29,6 +29,7 @@ jobs:
     strategy:
       matrix:
         alist: [thing1, thing2, thing3]
+        secondlist: [second1, second2, second3, second4]
     steps:
       - id: foo
         uses: jordan-van-dyk-form3/composite@main
